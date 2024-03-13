@@ -78,7 +78,7 @@ else:
 
 ------------
 
-##3. Dado un carácter, construya un programa en Python para determinar si el carácter es un dígito o no.
+## 3. Dado un carácter, construya un programa en Python para determinar si el carácter es un dígito o no.
 ```python
 # Solicitar al usuario que ingrese un carácter
 caracter = input("Ingresa un carácter: ")

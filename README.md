@@ -1,7 +1,7 @@
 # Reto-4-Michael-Mora
-1. Dado un número entero, determinar si ese número corresponde al código ASCII de una vocal minúscula.
+## 1. Dado un número entero, determinar si ese número corresponde al código ASCII de una vocal minúscula.
 
-```pseudocode
+```python
 # Función para determinar si un número es el código ASCII de una vocal minúscula
 def es_vocal_minuscula(codigo):
     # Convertir el código entero a su correspondiente carácter ASCII
@@ -17,7 +17,16 @@ def es_vocal_minuscula(codigo):
         return False
 
 # Solicitar al usuario que ingrese un número entero
-codigo_usuario = int(input("Ingresa un número entero: "))
+while True:
+    codigo_usuario = input("Ingresa un número entero: ")
+    if codigo_usuario.strip():  # Verificar si la cadena no está vacía
+        try:
+            codigo_usuario = int(codigo_usuario)
+            break  # Salir del bucle si la conversión fue exitosa
+        except ValueError:
+            print("Por favor, ingresa un número entero válido.")
+    else:
+        print("Por favor, ingresa un número.")
 
 # Utilizar la función para determinar si corresponde a una vocal minúscula
 if es_vocal_minuscula(codigo_usuario):
@@ -29,8 +38,8 @@ else:
 
 ------------
 
-2. Dada una cadena de longitud 1, determine si el código ASCII de primera letra de la cadena es par o no.
-```pseudocode
+## 2. Dada una cadena de longitud 1, determine si el código ASCII de primera letra de la cadena es par o no.
+```python
 # Función para determinar si el código ASCII de un carácter es par
 def es_codigo_ascii_par(caracter):
     # Obtener el código ASCII del carácter
@@ -59,8 +68,8 @@ else:
 
 ------------
 
-3. Dado un carácter, construya un programa en Python para determinar si el carácter es un dígito o no.
-```pseudocode
+##3. Dado un carácter, construya un programa en Python para determinar si el carácter es un dígito o no.
+```python
 # Solicitar al usuario que ingrese un carácter
 caracter = input("Ingresa un carácter: ")
 
@@ -87,12 +96,12 @@ Es importante recordar que este programa solo verifica un único carácter. Si e
 
 ------------
 
-4. Dado un número real x, construya un programa que permita determinar si el número es positivo, negativo o cero. Para cada caso de debe imprimir el texto que se especifica a continuación:
+## 4. Dado un número real x, construya un programa que permita determinar si el número es positivo, negativo o cero. Para cada caso de debe imprimir el texto que se especifica a continuación:
 
 * Positivo: "El número x es positivo"
 * Negativo: "El número x es negativo"
 * Cero (0): "El número x es el neutro para la suma"
-```pseudocde
+```python
 # Solicitar al usuario que ingrese un número real
 x = float(input("Ingresa un número real x: "))
 
@@ -107,8 +116,9 @@ else:
   [![0.jpg](https://i.postimg.cc/C1y7nkf2/0.jpg)](https://postimg.cc/XZ8dTZLK)
 
 ------------
-5. Dado el centro y el radio de un círculo, determinar si un punto de R2 pertenece o no al interior del círculo.
-```pseudocode
+## 5. Dado el centro y el radio de un círculo, determinar si un punto de R2 pertenece o no al interior del círculo.
+
+```python
 import math
 
 # Función para calcular la distancia entre dos puntos
@@ -146,14 +156,14 @@ Este programa realiza lo siguiente:
 
 ------------
 
-6.Dadas tres longitudes positivas, determinar si con esas longitudes se puede construir un triángulo.
+## 6.Dadas tres longitudes positivas, determinar si con esas longitudes se puede construir un triángulo.
 En termino de longitudes *a*, *b* y *c* esto significa:
 
 1) *a*+*b* > *c*
 2) *a*+*c* > *b*
 3) *b*+*c* > *a*
 
-```pseudocode
+```python
 
 # Solicitar al usuario que ingrese las tres longitudes
 a = float(input("Ingresa la longitud del primer lado: "))
